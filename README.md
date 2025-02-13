@@ -40,7 +40,7 @@ The system provides the following options for hotel room management:
 - **Display**: View all the current customers and the rooms they are occupying.
 - **Exit**: Exit the program.
 
-## Example Usage
+## Example Usage Scenario
 ```
 **************************************************
 Welcome to the Hotel Management system!

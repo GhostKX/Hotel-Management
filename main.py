@@ -1,8 +1,10 @@
 # Hotel Management system
 
+# Dictionary for storing customer data
 rooms = {}
 
 
+# Logic for displaying all available customers
 def display_customers():
     if len(rooms) == 0:
         print('\nOccupied rooms: None\n'
@@ -18,6 +20,7 @@ def display_customers():
         print('Total number of occupied rooms: {}.\n'.format(count))
 
 
+# Logic for Deleting Customer Details
 def delete_customers():
     display_customers()
     if len(rooms) == 0:
@@ -32,6 +35,7 @@ def delete_customers():
             print('\nError invalid symbol!')
 
 
+# Loop for calling the functions until user decides to stop using it
 while True:
     print()
     print('*' * 50)
@@ -42,6 +46,8 @@ while True:
                     'To leave type in "0".\n'
                     '::: ').lower()
     if manager == 'add':
+
+        #Logic for adding a new customer
         customer_name = input('\nCustomer name: ')
         customer_number = int(input('Room number: '))
         if customer_number in rooms.values() and customer_name in rooms.keys():
@@ -55,9 +61,15 @@ while True:
             print('\nError')
 
     elif manager == 'delete':
+
+        # Calling the function to delete the customer
         delete_customers()
+
     elif manager == 'display':
+
+        # Calling the function to display the customer
         display_customers()
+
     elif manager == '0':
         print('\nExit')
         break
